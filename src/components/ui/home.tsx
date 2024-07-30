@@ -79,6 +79,9 @@ function Home() {
    ]
    // Array of recipe data
 
+   const backgroundImage = `url(${base}images/chef/chef.png)`
+   // setting background image for div
+
   return (
    <main className='flex flex-col gap-8 box-border overflow-hidden'>
       {/* Create nav for desktop view */}
@@ -86,7 +89,9 @@ function Home() {
             <DesktopNav />
       </MediaQuery>
       <section className="w-[100%] px-4 md:px-10 flex flex-col gap-20">
+
          {/* MAIN */}
+
          <div className="bg-[#E7FAFE] flex rounded-3xl relative justify-between md:flex-row flex-col flex-1">
             <div className="font-nav flex flex-col items-start shrink gap-6 px-6 py-14 w-fit">
                <div className="px-4 py-3 flex w-fit shadow-xl items-center gap-2 rounded-3xl bg-white">
@@ -155,7 +160,9 @@ function Home() {
                rel='preload' 
                className="rounded-e-3xl rounded-r-3xl shrink-0"/>
          </div>
+
          {/* CATEGORIES */}
+
          <div className="font-nav w-[100%] flex flex-col gap-8">
             <div className="flex w-[100%] justify-between items-center">
                <h3 className="font-[600] text-[18px] md:text-[24px] tarcking-[-4%]">
@@ -178,26 +185,52 @@ function Home() {
                }
             </div>
          </div>
+
          {/* SIMPLE & TASTY RECIPES */}
+
          <div className="flex flex-col gap-12 w-[100%]">
             <div className="flex flex-col items-center w-[100%]">
                <h3 className="font-[600] text-[36px] text-center tracking-[-4%]">
                   Simple and tasty recipes
                </h3>
-               <p className="font-[400] w-[300px] md:w-[75ch] text-[14px] text-center leading-[28px] tracking-tight">
+               <p className="font-[400] w-[90vw] md:w-[75ch] text-[14px] text-center leading-[28px] tracking-tight">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, labore ipsam corporis consequatur aperiam amet omnis non voluptatibus dolorem enim dicta repudiandae debitis nulla quis animi dolores facilis explicabo ea?
                </p>
             </div>
             <div className="w-[100%] flex flex-wrap md:justify-between gap-x-4 gap-y-4 md:gap-y-8 justify-center lg:gap-y-10">
                {
                   recipe.map((value, index) => (
-                     (index != 5) ? <Recipe image= {value.image} text= {value.text} /> : <img src={`${base}images/recipe/ads.png`} alt="ADS" className="w-[316px]"/>
+                     (index != 5) ? <Recipe image= {value.image} text= {value.text} /> : <img src={`${base}images/recipe/ads.png`} alt="ADS" className="w-[300px]"/>
                   ))
                }
             </div>
          </div>
          <div>
-            
+
+         {/* CHEF IMAGE SECTIOn */}
+         <div className="w-[100%] items-center gap-4 justify-center flex flex-col md:flex-row md:justify-center">
+            <div className="flex flex-col gap-4 w-[90vw] px-2 md:w-[75ch]">
+               <h3 className="font-[600] text-[32px] md:text-[36px] leading-[40px] md:leading-[50px]">
+                  Everyone can be a chef in their own kitchen
+               </h3>
+               <p className="font-[400] text-[16px] text-justify">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, sed expedita consequatur ipsum in perspiciatis reprehenderit illo consectetur consequuntur quisquam hic perferendis neque id labore ut ea velit provident quae?
+               </p>
+               <button type="button" className="mt-8 font-[600] text-[14px] bg-black text-white px-6 py-3 tracking-tight h-fit w-fit rounded-xl">
+                  View recipes
+               </button>
+            </div>
+            <div className="bg-gradient-to-b from-white to-[#E7F9FD] rounded-b-xl">
+               <div style={{backgroundImage, backgroundSize: 'cover', backgroundPosition: 'center'}} className="w-[96vw] md:w-[500px] h-[450px]">
+                  <div className="w-[100%] px-4 flex justify-between translate-y-[80px]">
+                     <img src={`${base}images/chef/meat.png`} alt="meat" className="w-[50px] h-[50px]"/>
+                     <img src={`${base}images/chef/onions.png`} alt="onions" className="w-[30px] h-[30px] translate-x-[-50px] md:translate-x-[-100px]"/>
+                  </div>
+                  <img src={`${base}images/chef/vegan.png`} alt="vegan" className="float-right mr-7 translate-y-[90px] w-[40px] h-[40px]" />
+                  <img src={`${base}images/chef/apple.png`} alt="apple" className="w-[30px] h-[30px] translate-y-[300px] md:translate-x-[-15px]"/>
+               </div>
+            </div>
+         </div>
          </div>
       </section>
    </main>

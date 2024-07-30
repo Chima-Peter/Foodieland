@@ -23,8 +23,8 @@ const Recipe: React.FC<RecipeProps> = ({ image, text }) => {
    }
 
   return (
-      <div key={text}  className="rounded-xl flex pb-4 flex-col gap-2 bg-[#E7F9FD] font-nav w-[316px]">
-         <div className="rounded-xl w-[316px] h-[200px]" 
+      <div key={text}  className="rounded-xl flex pb-4 flex-col gap-2 bg-[#E7F9FD] font-nav w-[300px]">
+         <div className="rounded-xl w-[300px] h-[200px]" 
             style={{backgroundImage,   backgroundSize: 'cover', backgroundPosition: 'center'}}>
                <div className="p-2 cursor-pointer rounded-full bg-white mr-4 float-right mt-4">
                   {
