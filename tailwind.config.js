@@ -8,7 +8,8 @@ module.exports = {
   theme: {
    fontFamily: {
       'logo': ['Lobster'],
-      'main': ['Raleway']
+      'main': ['Raleway'],
+      'nav': ['Inter']
    },
     extend: {},
   },

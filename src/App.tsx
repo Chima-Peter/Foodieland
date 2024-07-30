@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import ErrorPage from "./components/ui/errorpage"
 import { createContext, useContext, useEffect, useState } from "react"
+import Home from "./components/ui/home"
 
 type Context = '/' | '/SavvySaver/'
 const BaseContext = createContext<Context>('/')
@@ -16,6 +17,7 @@ export function App() {
       <BrowserRouter basename={import.meta.env.DEV ? '/' : '/e-commerce_project/'}>
          <Routes>
             <Route path="*" element={<ErrorPage />} />
+            <Route path="/" element={<Home />} />
          </Routes> 
       </BrowserRouter>
    </BaseContext.Provider>

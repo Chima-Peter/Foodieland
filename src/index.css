@@ -6,11 +6,16 @@
    @font-face {
      font-family: 'Lobster';
      font-display: swap;
-     src: url('/fonts/InteLobster-Regular.ttf');
+     src: url('/fonts/Lobster-Regular.ttf');
    }
    @font-face {
       font-family: 'Raleway';
       font-display: swap;
       src: url('/fonts/Raleway-Regular.ttf');
+   }
+   @font-face {
+      font-family: 'Inter';
+      font-display: swap;
+      src: url('/fonts/Inter-Regular.ttf');
    }
  }
