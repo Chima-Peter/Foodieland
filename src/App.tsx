@@ -3,18 +3,19 @@ import ErrorPage from "./components/ui/errorpage"
 import { createContext, useContext, useEffect, useState } from "react"
 import Home from "./components/ui/home"
 
-type Context = '/' | '/SavvySaver/'
+type Context = '/' | '/foodieland/'
 const BaseContext = createContext<Context>('/')
 
 export function App() {
    const [base, setBase] = useState<Context>('/')
    useEffect(() => {
-      import.meta.env.DEV ? setBase('/') : setBase('/SavvySaver/')
+      import.meta.env.DEV ? setBase('/') : setBase('/foodieland/')
    }, [])
+   // Set base to be either / or /foodieland/ so images can have the right path both in production and development mode
 
   return (
    <BaseContext.Provider value={base} >
-      <BrowserRouter basename={import.meta.env.DEV ? '/' : '/e-commerce_project/'}>
+      <BrowserRouter basename={import.meta.env.DEV ? '/' : '/foodieland/'}>
          <Routes>
             <Route path="*" element={<ErrorPage />} />
             <Route path="/" element={<Home />} />
