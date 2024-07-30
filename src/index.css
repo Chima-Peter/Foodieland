@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+   @font-face {
+     font-family: 'Lobster';
+     font-display: swap;
+     src: url('/fonts/InteLobster-Regular.ttf');
+   }
+   @font-face {
+      font-family: 'Raleway';
+      font-display: swap;
+      src: url('/fonts/Raleway-Regular.ttf');
+   }
+ }

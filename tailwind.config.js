@@ -6,6 +6,10 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+   fontFamily: {
+      'logo': ['Lobster'],
+      'main': ['Raleway']
+   },
     extend: {},
   },
   plugins: [],
