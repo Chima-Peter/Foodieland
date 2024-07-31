@@ -7,11 +7,22 @@ import { FaPlayCircle } from "react-icons/fa";
 import Recipe from "../lib/recipe";
 import { FaInstagram } from "react-icons/fa6";
 import Recipe02 from "../lib/recipe02";
-
+import isEmail from 'validator/lib/isEmail';
+import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
    const base = useBaseContext()
    // Access basename using context from APP.tsx
+   const [email, setEmail] = useState(false)
+   // state to check if email is verified
+
+   const emailRef = useRef<HTMLInputElement>(null)
+   //Accessing the email input
+
+   const navigate = useNavigate()
+   // for routing programmatically
+   
 
    const categories = [
       {
@@ -121,6 +132,28 @@ function Home() {
          text: 'Chicken Ramen Soup with Mushroom'
       },
    ]
+
+   // handling verification of email input field to see if it's valid or not
+
+   const verifyEmail = (event: React.FocusEvent<HTMLInputElement>) => {
+      if (isEmail(event.target.value)) setEmail(true)
+      else {
+         setEmail(false)
+         if (emailRef.current)
+            emailRef.current.focus()
+         // check emailRef.current to prevent null value then makes email field point of focus if email is invalid
+      }
+   }
+
+   // handle submit only if email is valid
+   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault()
+      if (email) navigate('/')
+      else {
+         if (emailRef.current)
+            emailRef.current.focus()
+      }
+   }
 
   return (
    <main className='flex flex-col gap-10 box-border overflow-hidden'>
@@ -295,6 +328,9 @@ function Home() {
             <FaInstagram className="w-5 h-5"/>
          </button>
       </section>
+
+      { /* SECOND RECIPE */}
+
       <section className="flex flex-col gap-6 px-4 md:px-10 font-nav mt-6">
          <div className="flex flex-wrap justify-center lg:justify-between gap-3 items-center">
                <h3 className="w-[300px] md:w-[500px] font-[600] text-[28px] md:text-[36px]">
@@ -311,6 +347,26 @@ function Home() {
                   ))
                }
             </div>
+      </section>
+      <section className="w-[100%] px-4 md:px-10 mt-6 mb-20 font-nav">
+         <div className="bg-[100%] bg-[#E7F9FD] w-[100%] flex flex-col gap-2 pt-8 items-center rounded-2xl text-white">
+            <h4 className="w-[300px] md:w-[500px] font-[600] text-[28px] text-center text-black md:text-[36px]">
+               Deliciousness to your inbox
+            </h4>
+            <p className="w-[300px] text-center text-black md:w-[600px] px-2 pt-2 font-[400] text-[14px]">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores doloremque nostrum ratione nobis earum voluptate dolor mollitia cumque corrupti? Minus cumque nam corporis repellendus maxime suscipit veritatis voluptatem voluptatum.
+            </p>
+            <div className="flex w-[100%] items-center justify-center md:justify-between flex-wrap md:flex-nowrap">
+               <img src={`${base}images/inbox/salad.png`} className="w-[200px] h-[200px] hidden md:block rounded-l-2xl" alt="Salad" />
+               <form className="bg-white border  w-fit rounded-2xl py- mb-6 mt-2 md:mt-0 md:mb-0 border-white px-2" noValidate onSubmit={handleSubmit}>
+                  <input type="email" name="email" onBlur={verifyEmail} id="email" placeholder="Email" className={`placeholder:text-sm placeholder:text-gray-600 px-4 text-black text-[16px] focus:outline-none outline-none`} ref={emailRef} />
+                  <button type="submit" className="bg-black text-white font-[600] px-3 h-fit py-2 rounded-xl text-[13px] leading-[17px] tracking-wide">
+                     Submit
+                  </button>
+               </form>
+               <img src={`${base}images/inbox/photo.png`} className="w-[200px] h-[200px] hidden md:block rounded-e-2xl" alt="Meal" />
+            </div>
+         </div>
       </section>
    </main>
   )

@@ -32,7 +32,7 @@ const Recipe02: React.FC<RecipeProps> = ({ image, text }) => {
                   }
                </div>
          </div>
-         <h3 className="font-[600] text-[16px] leading-[32px] tracking-[-4%] px-4">
+         <h3 className="font-[600] text-[16px] tracking-[-4%] px-4">
             {text}
          </h3>
          <div className="flex justify-start gap-1">
