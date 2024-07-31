@@ -5,6 +5,8 @@ import { BiSolidAlarm } from "react-icons/bi";
 import { PiForkKnifeFill } from "react-icons/pi";
 import { FaPlayCircle } from "react-icons/fa";
 import Recipe from "../lib/recipe";
+import { FaInstagram } from "react-icons/fa6";
+
 
 function Home() {
    const base = useBaseContext()
@@ -78,6 +80,8 @@ function Home() {
       },
    ]
    // Array of recipe data
+
+   const imgArray = [1,2,3,4]
 
    const backgroundImage = `url(${base}images/chef/chef.png)`
    // setting background image for div
@@ -205,9 +209,8 @@ function Home() {
                }
             </div>
          </div>
-         <div>
-
          {/* CHEF IMAGE SECTIOn */}
+
          <div className="w-[100%] items-center gap-4 justify-center flex flex-col md:flex-row md:justify-center">
             <div className="flex flex-col gap-4 w-[90vw] px-2 md:w-[75ch]">
                <h3 className="font-[600] text-[32px] md:text-[36px] leading-[40px] md:leading-[50px]">
@@ -231,7 +234,30 @@ function Home() {
                </div>
             </div>
          </div>
+      </section>
+      {/* FOODIE ISLAND */}
+      <section className="flex flex-col gap-4 w-[100%] bg-gradient-to-b px-4 pb-12 from-white to-[#E7F9FD] md:px-10 ">
+         <div className="flex flex-col gap-2 items-center w-[100%] mb-6">
+            <h3 className="font-[600] text-[36px] text-center tracking-[-4%]">
+               Check out @foodieland on Instagram
+            </h3>
+            <p className="font-[400] w-[90vw] md:w-[75ch] text-[14px] text-center tracking-tight">
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, labore ipsam corporis consequatur aperiam amet omnis non voluptatibus dolorem enim dicta repudiandae debitis nulla quis animi dolores facilis explicabo ea?
+            </p>
          </div>
+         <div className="w-[100%] flex flex-wrap gap-2 md:justify-between">
+            {
+               imgArray.map(value => (
+                  <img src= {`${base}images/instagram/${value}.png`} className="w-[250px]" alt={`image ${value}`} />
+               ))
+            }
+         </div>
+         <button type="button" className="mt-8 flex gap-2 items-center self-center font-[600] text-[14px] bg-black text-white px-6 py-3 tracking-tight h-fit w-fit rounded-xl">
+            <span>
+               Visit Our Instagram
+            </span>
+            <FaInstagram className="w-5 h-5"/>
+         </button>
       </section>
    </main>
   )
