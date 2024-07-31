@@ -8,14 +8,14 @@ interface RecipeProps {
    image: string,
    text: string
 }
-const Recipe: React.FC<RecipeProps> = ({ image, text }) => {
+const Recipe02: React.FC<RecipeProps> = ({ image, text }) => {
    const base = useBaseContext()
    // Using base to set correct path to image
 
    const [favourite, setFavourite]= useState(true)
    // state to change color when clicked
 
-   const backgroundImage = `url(${base}images/recipe/${image}.png)`
+   const backgroundImage = `url(${base}images/recipe02/${image}.png)`
    // setting background image for div
 
    const handleFavourite = () => {
@@ -23,8 +23,8 @@ const Recipe: React.FC<RecipeProps> = ({ image, text }) => {
    }
 
   return (
-      <div key={text}  className="rounded-xl flex pb-2 flex-col gap-2 bg-[#E7F9FD] font-nav w-[300px]">
-         <div className="rounded-xl w-[300px] h-[150px]" 
+      <div key={text}  className="rounded-xl flex pb-1 flex-col gap-2 bg-[#E7F9FD] font-nav w-[250px]">
+         <div className="rounded-xl w-[250px] h-[130px]" 
             style={{backgroundImage,   backgroundSize: 'cover', backgroundPosition: 'center'}}>
                <div className="p-2 cursor-pointer rounded-full bg-white mr-4 float-right mt-4">
                   {
@@ -53,4 +53,4 @@ const Recipe: React.FC<RecipeProps> = ({ image, text }) => {
   )
 }
 
-export default Recipe
+export default Recipe02

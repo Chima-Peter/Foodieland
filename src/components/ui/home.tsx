@@ -6,6 +6,7 @@ import { PiForkKnifeFill } from "react-icons/pi";
 import { FaPlayCircle } from "react-icons/fa";
 import Recipe from "../lib/recipe";
 import { FaInstagram } from "react-icons/fa6";
+import Recipe02 from "../lib/recipe02";
 
 
 function Home() {
@@ -43,40 +44,40 @@ function Home() {
    const recipe = [
       {
          image: 'beef',
-         text: 'Big and Juicy Wagyu Beef Cheeseburger'
+         text: 'Big and Juicy Wagyu Beef Cheeseburger',
       },
       {
          image: 'salmon',
-         text: 'Fresh Lime Roasted Salmon with Ginger Sauce'
+         text: 'Fresh Lime Roasted Salmon with Ginger Sauce',
       },
       {
          image: 'strawberry',
-         text: 'Strawberry Oatmeal Pancake with Honey Syrup'
+         text: 'Strawberry Oatmeal Pancake with Honey Syrup',
       },
       {
          image: 'salad',
-         text: 'Fresh and Healthy Mixed Mayonnaise Salad'
+         text: 'Fresh and Healthy Mixed Mayonnaise Salad',
       },
       {
          image: 'meatballs',
-         text: 'Chicken Meatballs with Cream Cheese'
+         text: 'Chicken Meatballs with Cream Cheese',
       },
       // Empty object for the ad image
       {
          image: '',
-         text: ''
+         text: '',
       },
       {
          image: 'fruity',
-         text: 'Fruity Pancake with Orange & Blueberry'
+         text: 'Fruity Pancake with Orange & Blueberry',
       },
       {
          image: 'rice',
-         text: 'The Best Easy One Pot Chicken and Rice'
+         text: 'The Best Easy One Pot Chicken and Rice',
       },
       {
          image: 'pasta',
-         text: 'The Creamiest Creamy Chicken and Bacon Pasta'
+         text: 'The Creamiest Creamy Chicken and Bacon Pasta',
       },
    ]
    // Array of recipe data
@@ -86,8 +87,43 @@ function Home() {
    const backgroundImage = `url(${base}images/chef/chef.png)`
    // setting background image for div
 
+   const recipe02 = [
+      {
+         image: 'salad',
+         text: 'Mixed Tropical Fruit Salad with Superfood Boosts'
+      },
+      {
+         image: 'beef',
+         text: 'Big and Juicy Wagyu Beef Cheeseburger'
+      },
+      {
+         image: 'rice',
+         text: 'Healthy Japanese Fried Rice with Asparagus'
+      },
+      {
+         image: 'taco',
+         text: 'Cauflower Walnut Vegetarian Taco Meat'
+      },
+      {
+         image: 'chicken',
+         text: 'Rainbow Chicken Salad with Almond Honey Mustard Dressing'
+      },
+      {
+         image: 'chips',
+         text: 'Barbecue Spicy Sandwiches with Chips'
+      },
+      {
+         image: 'vegan',
+         text: 'Firecracker Vegan Lettuce Wraps - Spicy!'
+      },
+      {
+         image: 'ramen',
+         text: 'Chicken Ramen Soup with Mushroom'
+      },
+   ]
+
   return (
-   <main className='flex flex-col gap-8 box-border overflow-hidden'>
+   <main className='flex flex-col gap-10 box-border overflow-hidden'>
       {/* Create nav for desktop view */}
       <MediaQuery minWidth={768}>
             <DesktopNav />
@@ -204,7 +240,7 @@ function Home() {
             <div className="w-[100%] flex flex-wrap md:justify-between gap-x-4 gap-y-4 md:gap-y-8 justify-center lg:gap-y-10">
                {
                   recipe.map((value, index) => (
-                     (index != 5) ? <Recipe image= {value.image} text= {value.text} /> : <img src={`${base}images/recipe/ads.png`} alt="ADS" className="w-[300px]"/>
+                     (index != 5) ? <Recipe image= {value.image} text= {value.text} /> : <img src={`${base}images/recipe/ads.png`} alt="ADS" className="w-[300px] h-[250px]"/>
                   ))
                }
             </div>
@@ -236,16 +272,16 @@ function Home() {
          </div>
       </section>
       {/* FOODIE ISLAND */}
-      <section className="flex flex-col gap-4 w-[100%] bg-gradient-to-b px-4 pb-12 from-white to-[#E7F9FD] md:px-10 ">
+      <section className="flex flex-col gap-4 w-[100%] bg-gradient-to-b font-nav mt-6 px-4 pb-12 from-white to-[#E7F9FD] md:px-10 ">
          <div className="flex flex-col gap-2 items-center w-[100%] mb-6">
-            <h3 className="font-[600] text-[36px] text-center tracking-[-4%]">
+            <h3 className="font-[600] text-[28px] md:text-[36px] text-center tracking-[-4%]">
                Check out @foodieland on Instagram
             </h3>
             <p className="font-[400] w-[90vw] md:w-[75ch] text-[14px] text-center tracking-tight">
                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, labore ipsam corporis consequatur aperiam amet omnis non voluptatibus dolorem enim dicta repudiandae debitis nulla quis animi dolores facilis explicabo ea?
             </p>
          </div>
-         <div className="w-[100%] flex flex-wrap gap-2 md:justify-between">
+         <div className="w-[100%] flex flex-wrap gap-4 md:justify-between justify-center">
             {
                imgArray.map(value => (
                   <img src= {`${base}images/instagram/${value}.png`} className="w-[250px]" alt={`image ${value}`} />
@@ -258,6 +294,23 @@ function Home() {
             </span>
             <FaInstagram className="w-5 h-5"/>
          </button>
+      </section>
+      <section className="flex flex-col gap-6 px-4 md:px-10 font-nav mt-6">
+         <div className="flex flex-wrap justify-center lg:justify-between gap-3 items-center">
+               <h3 className="w-[300px] md:w-[500px] font-[600] text-[28px] md:text-[36px]">
+               Try this delicious recipe to make your day
+            </h3>
+            <p className="w-[300px] md:w-[500px] font-[400] text-[14px]">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quas sapiente, numquam aliquid assumenda odit ipsam officia delectus vero sunt veniam odio omnis aperiam perferendis eum sed obcaecati eligendi eveniet.
+            </p>
+         </div>
+         <div className="w-[100%] flex flex-wrap md:justify-between gap-x-4 gap-y-4 md:gap-y-8 justify-center lg:gap-y-10">
+               {
+                  recipe02.map((value) => (
+                     <Recipe02 image= {value.image} text= {value.text} />
+                  ))
+               }
+            </div>
       </section>
    </main>
   )
