@@ -11,6 +11,7 @@ import isEmail from 'validator/lib/isEmail';
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../lib/footer";
+import MobileNav from "../lib/mobile_nav";
 
 function Home() {
    const base = useBaseContext()
@@ -159,10 +160,13 @@ function Home() {
   return (
    <main className='flex flex-col gap-10 box-border overflow-hidden'>
       {/* Create nav for desktop view */}
-      <MediaQuery minWidth={768}>
+      <MediaQuery minWidth={769}>
             <DesktopNav />
       </MediaQuery>
-      <section className="w-[100%] px-4 md:px-10 flex flex-col gap-20">
+      <MediaQuery maxWidth={768}>
+            <MobileNav />
+      </MediaQuery>
+      <section className="w-[100%] px-4 md:px-10 flex flex-col gap-20 mt-28 md:mt-24 lg:mt-6">
 
          {/* MAIN */}
 
@@ -219,7 +223,7 @@ function Home() {
                   </div>
                </div>
             </div>
-            <div className="absolute md:translate-x-[-450px] lg:translate-x-[-520px] right-0 pt-6 hidden md:block shrink-0">
+            <div className="absolute md:translate-x-[-320px] lg:translate-x-[-520px] right-0 pt-6 hidden md:block shrink-0">
                <div className="bg-black rounded-[50%] w-[150px] h-[150px] flex justify-center items-center">
                   <div className="bg-white rounded-[50%] w-[80px] h-[80px] flex justify-center items-center">
                      <img src={`${base}images/main/thumb.png`} alt="thumbs up" className="w-[50px] -rotate-[25deg] h-[50px]" />
@@ -349,6 +353,9 @@ function Home() {
                }
             </div>
       </section>
+
+      {/* INBOX SECTION */}
+
       <section className="w-[100%] px-4 md:px-10 mt-6 mb-20 font-nav">
          <div className="bg-[100%] bg-[#E7F9FD] w-[100%] flex flex-col gap-2 pt-8 items-center rounded-2xl text-white">
             <h4 className="w-[300px] md:w-[500px] font-[600] text-[28px] text-center text-black md:text-[36px]">
