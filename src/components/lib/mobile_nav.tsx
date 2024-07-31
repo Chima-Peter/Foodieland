@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa6";
 import { motion } from 'framer-motion'
 import { useState } from "react";
@@ -70,46 +70,46 @@ function MobileNav() {
                }}>
                <ul className="flex gap-6 flex-col items-start appearance-none font-nav">
                   <li>
-                     <Link to={'/'} className="text-sm font-[500] hover:border-b-2 pb-1 border-b-black tracking-tight">
+                     <NavLink to={'/'} className="text-sm font-[500] hover:border-b-2 pb-1 border-b-black tracking-tight">
                         Home
-                     </Link>
+                     </NavLink>
                   </li>
                   <li>
-                     <Link to={'/recipe'}  className="text-sm font-[500] hover:border-b-2 pb-1 border-b-black tracking-tight">
+                     <NavLink to={'/recipe'}  className="text-sm font-[500] hover:border-b-2 pb-1 border-b-black tracking-tight">
                         Recipes
-                     </Link>
+                     </NavLink>
                   </li>
                   <li>
-                     <Link to={'/'}  className="text-sm font-[500] hover:border-b-2 pb-1 border-b-black tracking-tight">
+                     <NavLink to={'_'}  className="text-sm font-[500] hover:border-b-2 pb-1 border-b-black tracking-tight">
                         Blog
-                     </Link>
+                     </NavLink>
                   </li>
                   <li>
-                     <Link to={'/'}  className="text-sm font-[500] hover:border-b-2 pb-1 border-b-black tracking-tight">
+                     <NavLink to={'_'}  className="text-sm font-[500] hover:border-b-2 pb-1 border-b-black tracking-tight">
                         Contact
-                     </Link>
+                     </NavLink>
                   </li>
                   <li>
-                     <Link to={'/'}  className="text-sm font-[500] hover:border-b-2 pb-1 border-b-black tracking-tight">
+                     <NavLink to={'_'}  className="text-sm font-[500] hover:border-b-2 pb-1 border-b-black tracking-tight">
                         About us
-                     </Link>
+                     </NavLink>
                   </li>
                </ul>
                <ul className="flex gap-6 justify-start appearance-none">
                   <li>
-                     <Link to={''}>
+                     <NavLink to={''}>
                         <FaFacebookF className="w-4 h-4" />
-                     </Link>
+                     </NavLink>
                   </li>
                   <li>
-                     <Link to={''}>
+                     <NavLink to={''}>
                         <FaTwitter className="w-4 h-4" />
-                     </Link>
+                     </NavLink>
                   </li>
                   <li>
-                     <Link to={''}>
+                     <NavLink to={''}>
                         <FaInstagram className="w-4 h-4" />
-                     </Link>
+                     </NavLink>
                   </li>
                </ul>
          </motion.div>
