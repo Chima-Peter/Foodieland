@@ -265,7 +265,8 @@ function Recipe() {
          </h3>
          <div>
             <Direction_1 num={1} />
-            <p className="font-[400] tracking-wider text-[13px] text-justify leading-[24px] pl-9 border-b borer-b-gray-500 pb-4">
+            <img src={`${base}images/main/lady.png`} className="w-[100%] pl-9 hidden md:block rounded-lg" alt="Chef" />
+            <p className="font-[400] tracking-wider text-[13px] text-justify leading-[24px] pl-9 border-b borer-b-gray-500 py-4">
                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, magni ad. Magnam, qui! Corrupti, ipsam alias aperiam, nihil, laudantium distinctio fuga dolorum culpa maiores provident cupiditate in necessitatibus consequuntur assumenda! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, excepturi repellendus vero nulla quibusdam magni eaque veniam fugiat? Odio quisquam deleniti alias modi aliquam earum dolore tempora necessitatibus corporis magni!
             </p>
          </div>
