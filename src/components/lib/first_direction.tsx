@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { FaCircleCheck } from "react-icons/fa6"
+
 interface DirectionProps {
    num: number
 }
-
-const Direction: React.FC<DirectionProps> = ({ num }) => {
+const Direction_1: React.FC<DirectionProps> = ({ num }) => {
    const [check, setCheck] = useState(false)
    // Detect when user clicks on checked icon
 
@@ -14,7 +14,7 @@ const Direction: React.FC<DirectionProps> = ({ num }) => {
    // Toggle icon
    
    return (
-      <div  className="flex gap-4 items-start w-[100%] border-b border-b-gray-300 py-4 flex-col">
+      <div  className="flex flex-col gap-4 items-start w-[100%] py-4">
          <div className="flex gap-4 items-center">
             {
                check ? <FaCircleCheck onClick={handleIcon} className="w-5 h-5 cursor-pointer" /> : <div onClick={handleIcon}  className="rounded-full border border-black w-5 h-5 cursor-pointer"></div>
@@ -30,4 +30,4 @@ const Direction: React.FC<DirectionProps> = ({ num }) => {
    )
 }
 
-export default Direction
+export default Direction_1

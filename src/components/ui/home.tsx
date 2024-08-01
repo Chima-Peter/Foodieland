@@ -151,7 +151,7 @@ function Home() {
    // handle submit only if email is valid
    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault()
-      if (email) navigate('/')
+      if (email) navigate('/recipe')
       else {
          if (emailRef.current)
             emailRef.current.focus()
@@ -312,7 +312,7 @@ function Home() {
          </div>
       </section>
 
-      {/* FOODIE ISLAND */}
+      {/* INSTAGRAM */}
 
       <section className="flex flex-col gap-4 w-[100%] bg-gradient-to-b font-nav mt-6 px-4 pb-12 from-white to-[#E7F9FD] md:px-10 ">
          <div className="flex flex-col gap-2 items-center w-[100%] mb-6">
@@ -370,7 +370,7 @@ function Home() {
             </p>
             <div className="flex w-[100%] items-center justify-center md:justify-between flex-wrap md:flex-nowrap">
                <img src={`${base}images/inbox/salad.png`} className="w-[200px] h-[200px] hidden md:block rounded-l-2xl" alt="Salad" />
-               <form className="bg-white border w-[100%] md:w-fit rounded-2xl py-1 mb-6 mt-2 md:mt-0 md:mb-0 border-white px-1 mx-1" noValidate onSubmit={handleSubmit}>
+               <form className="bg-white border md:w-fit rounded-2xl py-1 mb-6 mt-2 md:mt-0 md:mb-0 border-white px-1 mx-1  w-[100%] flex justify-between" noValidate onSubmit={handleSubmit}>
                   <input type="email" name="email" onBlur={verifyEmail} id="email" placeholder="Email" className={`placeholder:text-sm placeholder:text-gray-600 px-1 md:px-4 text-black text-[16px] focus:outline-none outline-none w-[200px]`} ref={emailRef} />
                   <button type="submit" className="bg-black text-white font-[600] px-3 h-fit py-2 rounded-lg text-[13px] tracking-wide">
                      Submit

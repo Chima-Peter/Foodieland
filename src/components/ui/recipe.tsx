@@ -11,6 +11,9 @@ import { Ingredients } from "../lib/ingredients";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { isEmail } from "validator";
+import Direction from "../lib/direction";
+import Direction_1 from "../lib/first_direction";
+import Recipe03 from "../lib/recipe03";
 
 function Recipe() {
    const base = useBaseContext()
@@ -50,6 +53,26 @@ function Recipe() {
       },
    ]
    // Array of nutritional information
+
+    const recipe02 = [
+      {
+         image: 'salad',
+         text: 'Mixed Tropical Fruit Salad with Superfood Boosts'
+      },
+      {
+         image: 'beef',
+         text: 'Big and Juicy Wagyu Beef Cheeseburger'
+      },
+      {
+         image: 'rice',
+         text: 'Healthy Japanese Fried Rice with Asparagus'
+      },
+      {
+         image: 'taco',
+         text: 'Cauflower Walnut Vegetarian Taco Meat'
+      },
+   ]
+
 
    const verifyEmail = (event: React.FocusEvent<HTMLInputElement>) => {
       if (isEmail(event.target.value)) setEmail(true)
@@ -183,24 +206,24 @@ function Recipe() {
 
          {/* INGREDIENTS & OTHER RECIPE SECTION */}
 
-         <section className="flex justify-start md:justify-between w-[100%] sm:flex-wrap px-4 md:px-10">
-            <div className="flex flex-col gap-6 w-[100%] md:w-[55vw]">
+         <section className="flex justify-start md:justify-between w-[100%] gap-4 flex-wrap px-4 md:px-10">
+            <div className="flex flex-col gap-6 w-[100%] md:w-fit lg:w-[55vw]">
                <h3 className="font-[600] text-[24px]">
                   Ingredients
                </h3>
                <Ingredients text="For main dish" length={5} />
                <Ingredients text="For the sauce" length={3} />
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 w-[100%]  md:w-[300px]">
                <h3 className="font-[600] justify-start text-[20px]">
                   Other Recipe
                </h3>
-               <div className="flex flex-col  w-[300px] gap-3">
-                  <div className="flex gap-2 items-center">
+               <div className="flex flex-col gap-3">
+                  <div className="flex gap-2 items-center w-[100%]">
                      <img src={`${base}images/recipe/meatballs.png`} alt="" className="w-[120px] h-[80px] rounded-2xl"/>
-                     <div className="flex flex-col gap-2 py-2">
-                        <h3 className="font-[600] text-32px  overflow-hidden text-ellipsis text-nowrap whitespace-pre-wrap w-[170px]">
-                           Chicken Meatbals with Creamy Cheese
+                     <div className="flex flex-col gap-2 py-2 w-[100%]">
+                        <h3 className="font-[600] text-32px  overflow-hidden text-ellipsis text-wrap w-[200px]">
+                           Chicken Meatballs with Creamy Cheese
                         </h3>
                         <p className="font-[400] text-[12px]">
                            By Andreas Paula
@@ -210,7 +233,7 @@ function Recipe() {
                   <div className="flex gap-2 items-center">
                      <img src={`${base}images/recipe/pasta.png`} alt="" className="w-[120px] h-[80px] rounded-2xl"/>
                      <div className="flex flex-col gap-2 py-2">
-                        <h3 className="font-[600] text-32px  overflow-hidden text-ellipsis text-nowrap whitespace-pre-wrap w-[170px]">
+                        <h3 className="font-[600] text-32px  overflow-hidden text-ellipsis text-wrap w-[200px]">
                            The Creamiest Creamy Chicken and Bacon Pasta
                         </h3>
                         <p className="font-[400] text-[12px]">
@@ -221,7 +244,7 @@ function Recipe() {
                   <div className="flex gap-2 items-center">
                      <img src={`${base}images/recipe/rice.png`} alt="" className="w-[120px] h-[80px] rounded-2xl"/>
                      <div className="flex flex-col gap-2 py-2">
-                        <h3 className="font-[600] text-32px  overflow-hidden text-ellipsis text-nowrap whitespace-pre-wrap w-[170px]">
+                        <h3 className="font-[600] text-32px  overflow-hidden text-ellipsis text-wrap w-[200px]">
                            The Best East One Pot Chicken and Rice
                         </h3>
                         <p className="font-[400] text-[12px]">
@@ -229,21 +252,43 @@ function Recipe() {
                         </p>
                      </div>
                   </div>
-                  <img src={`${base}images/recipe/ads.png`} className="w-[100%] h-[300px]" alt="" />
+                  <img src={`${base}images/recipe/ads.png`} className="w-[100%] h-[300px] mt-5 md:mt-0" alt="" />
                </div>
             </div>
          </section>
 
          {/* DIRECTIONS SECTION */}
 
-      <section className="w-[300px] md:w-[500px]">
+      <section className="w-[100%] md:w-[600px] lg:w-[900px] flex flex-col gap-4 px-4 md:px-10">
+         <h3 className="font-[600] text-[28px] tracking-tight">
+            Directions
+         </h3>
          <div>
-            
+            <Direction_1 num={1} />
+            <p className="font-[400] tracking-wider text-[13px] text-justify leading-[24px] pl-9 border-b borer-b-gray-500 pb-4">
+               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, magni ad. Magnam, qui! Corrupti, ipsam alias aperiam, nihil, laudantium distinctio fuga dolorum culpa maiores provident cupiditate in necessitatibus consequuntur assumenda! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, excepturi repellendus vero nulla quibusdam magni eaque veniam fugiat? Odio quisquam deleniti alias modi aliquam earum dolore tempora necessitatibus corporis magni!
+            </p>
          </div>
+         <Direction num={2} />
+         <Direction num={3}/>
       </section>
 
-         {/* INBOX SECTION */}
+      {/* RECIPE SECTION*/}
 
+      <section className="flex flex-col gap-10 px-4 md:px-10 font-nav mt-6">
+         <h4 className="font-[600] text-[28px] text-center">
+            You may like these recipes too
+         </h4>
+         <div className="w-[100%] flex flex-wrap md:justify-between gap-6 md:gap-y-8 justify-center">
+               {
+                  recipe02.map((value) => (
+                     <Recipe03 image= {value.image} text= {value.text} />
+                  ))
+               }
+            </div>
+      </section>
+
+      {/* INBOX SECTION */}
       <section className="w-[100%] px-4 md:px-10 mt-6 mb-20 font-nav">
          <div className="bg-[100%] bg-[#E7F9FD] w-[100%] flex flex-col gap-2 pt-8 items-center rounded-2xl text-white">
             <h4 className="w-[300px] md:w-[500px] font-[600] text-[28px] text-center text-black md:text-[36px]">
@@ -254,7 +299,7 @@ function Recipe() {
             </p>
             <div className="flex w-[100%] items-center justify-center md:justify-between flex-wrap md:flex-nowrap">
                <img src={`${base}images/inbox/salad.png`} className="w-[200px] h-[200px] hidden md:block rounded-l-2xl" alt="Salad" />
-               <form className="bg-white border w-[100%] md:w-fit rounded-2xl py-1 mb-6 mt-2 md:mt-0 md:mb-0 border-white px-1 mx-1" noValidate onSubmit={handleSubmit}>
+               <form className="bg-white border w-[100%] flex justify-between md:w-fit rounded-2xl py-1 mb-6 mt-2 md:mt-0 md:mb-0 border-white px-1 mx-1" noValidate onSubmit={handleSubmit}>
                   <input type="email" name="email" onBlur={verifyEmail} id="email" placeholder="Email" className={`placeholder:text-sm placeholder:text-gray-600 px-1 md:px-4 text-black text-[16px] focus:outline-none outline-none w-[200px]`} ref={emailRef} />
                   <button type="submit" className="bg-black text-white font-[600] px-3 h-fit py-2 rounded-lg text-[13px] tracking-wide">
                      Submit
@@ -264,6 +309,8 @@ function Recipe() {
             </div>
          </div>
       </section>
+
+
          <Footer />
       </main>
    )
