@@ -98,7 +98,7 @@ function Home() {
    const imgArray = [1,2,3,4]
    // Array of instagram images
 
-   const backgroundImage = `url(${base}images/chef/chef.png)`
+   const backgroundImage = `url(${base}images/chef/chef.webp)`
    // setting background image for div
 
    const recipe02 = [
@@ -175,7 +175,7 @@ function Home() {
          <div className="bg-[#E7FAFE] flex rounded-3xl relative justify-between md:flex-row flex-col flex-1">
             <div className="font-nav flex flex-col items-start shrink gap-6 px-6 py-14 w-fit">
                <div className="px-4 py-3 flex w-fit shadow-xl items-center gap-2 rounded-3xl bg-white">
-                  <img src= {`${base}images/main/img1.png`} className="w-5 h-5" alt="recipes" />
+                  <img src= {`${base}images/main/img1.webp`} className="w-5 h-5" alt="recipes" />
                   <p className="text-sm font-[600]">
                      Hot recipes
                   </p>
@@ -207,7 +207,7 @@ function Home() {
                </div>
                <div className="flex items-center justify-between w-[100%] mt-8 flex-wrap gap-4">
                   <div className="flex items-center gap-2">
-                     <img src={`${base}images/main/user.png`} alt="user" className="w-[50px] h-[50px] rounded-full" />
+                     <img src={`${base}images/main/user.webp`} alt="user" className="w-[50px] h-[50px] rounded-full" />
                      <div className="flex flex-col gap-2">
                         <h2 className="font-[700] text-[16px] leading-[19px] tracking-[-2%]">
                            John Smith
@@ -228,7 +228,7 @@ function Home() {
             <div className="absolute md:translate-x-[-320px] lg:translate-x-[-520px] right-0 pt-6 hidden md:block shrink-0">
                <div className="bg-black rounded-[50%] w-[150px] h-[150px] flex justify-center items-center">
                   <div className="bg-white rounded-[50%] w-[80px] h-[80px] flex justify-center items-center">
-                     <img src={`${base}images/main/thumb.png`} alt="thumbs up" className="w-[50px] -rotate-[25deg] h-[50px]" />
+                     <img src={`${base}images/main/thumb.webp`} alt="thumbs up" className="w-[50px] -rotate-[25deg] h-[50px]" />
                   </div>
                </div>
             </div>
@@ -256,7 +256,7 @@ function Home() {
                {
                   categories.map(value => (
                      <div key={value.name} className={`flex flex-col gap-2 items-center w-fit p-6 pb-3 text-center bg-gradient-to-b from-white to-${value.gradient} rounded-b-xl`}>
-                        <img src={`${base}images/categories/${value.name}.png`} alt="" className="w-[50px] h-[50px]"/>
+                        <img src={`${base}images/categories/${value.name}.webp`} alt="" className="w-[50px] h-[50px]"/>
                         <p className="font-[600] text-[12px] leading-[22px] tracking-[-2%]">
                            {value.name}
                         </p>
@@ -280,7 +280,7 @@ function Home() {
             <div className="w-[100%] flex flex-wrap md:justify-between gap-x-4 gap-y-4 md:gap-y-8 justify-center lg:gap-y-10">
                {
                   recipe.map((value, index) => (
-                     (index != 5) ? <Recipe image= {value.image} text= {value.text} /> : <img src={`${base}images/recipe/ads.png`} alt="ADS" className="w-[300px] h-[250px]"/>
+                     (index != 5) ? <Recipe image= {value.image} text= {value.text} /> : <img src={`${base}images/recipe/ads.webp`} alt="ADS" className="w-[300px] h-[250px]"/>
                   ))
                }
             </div>
@@ -302,11 +302,11 @@ function Home() {
             <div className="bg-gradient-to-b from-white to-[#E7F9FD] rounded-b-xl">
                <div style={{backgroundImage, backgroundSize: 'cover', backgroundPosition: 'center'}} className="w-[96vw] md:w-[500px] h-[450px]">
                   <div className="w-[100%] px-4 flex justify-between translate-y-[80px]">
-                     <img src={`${base}images/chef/meat.png`} alt="meat" className="w-[50px] h-[50px]"/>
-                     <img src={`${base}images/chef/onions.png`} alt="onions" className="w-[30px] h-[30px] translate-x-[-50px] md:translate-x-[-100px]"/>
+                     <img src={`${base}images/chef/meat.webp`} alt="meat" className="w-[50px] h-[50px]"/>
+                     <img src={`${base}images/chef/onions.webp`} alt="onions" className="w-[30px] h-[30px] translate-x-[-50px] md:translate-x-[-100px]"/>
                   </div>
-                  <img src={`${base}images/chef/vegan.png`} alt="vegan" className="float-right mr-7 translate-y-[90px] w-[40px] h-[40px]" />
-                  <img src={`${base}images/chef/apple.png`} alt="apple" className="w-[30px] h-[30px] translate-y-[300px] md:translate-x-[-15px]"/>
+                  <img src={`${base}images/chef/vegan.webp`} alt="vegan" className="float-right mr-7 translate-y-[90px] w-[40px] h-[40px]" />
+                  <img src={`${base}images/chef/apple.webp`} alt="apple" className="w-[30px] h-[30px] translate-y-[300px] md:translate-x-[-15px]"/>
                </div>
             </div>
          </div>
@@ -326,7 +326,7 @@ function Home() {
          <div className="w-[100%] flex flex-wrap gap-4 md:justify-between justify-center">
             {
                imgArray.map(value => (
-                  <img src= {`${base}images/instagram/${value}.png`} className="w-[250px]" alt={`image ${value}`} />
+                  <img src= {`${base}images/instagram/${value}.webp`} className="w-[250px]" alt={`image ${value}`} />
                ))
             }
          </div>
@@ -369,14 +369,14 @@ function Home() {
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores doloremque nostrum ratione nobis earum voluptate dolor mollitia cumque corrupti? Minus cumque nam corporis repellendus maxime suscipit veritatis voluptatem voluptatum.
             </p>
             <div className="flex w-[100%] items-center justify-center md:justify-between flex-wrap md:flex-nowrap">
-               <img src={`${base}images/inbox/salad.png`} className="w-[200px] h-[200px] hidden md:block rounded-l-2xl" alt="Salad" />
+               <img src={`${base}images/inbox/salad.webp`} className="w-[200px] h-[200px] hidden md:block rounded-l-2xl" alt="Salad" />
                <form className="bg-white border md:w-fit rounded-2xl py-1 mb-6 mt-2 md:mt-0 md:mb-0 border-white px-1 mx-1  w-[100%] flex justify-between" noValidate onSubmit={handleSubmit}>
                   <input type="email" name="email" onBlur={verifyEmail} id="email" placeholder="Email" className={`placeholder:text-sm placeholder:text-gray-600 px-1 md:px-4 text-black text-[16px] focus:outline-none outline-none w-[200px]`} ref={emailRef} />
                   <button type="submit" className="bg-black text-white font-[600] px-3 h-fit py-2 rounded-lg text-[13px] tracking-wide">
                      Submit
                   </button>
                </form>
-               <img src={`${base}images/inbox/photo.png`} className="w-[200px] h-[200px] hidden md:block rounded-e-2xl" alt="Meal" />
+               <img src={`${base}images/inbox/photo.webp`} className="w-[200px] h-[200px] hidden md:block rounded-e-2xl" alt="Meal" />
             </div>
          </div>
       </section>

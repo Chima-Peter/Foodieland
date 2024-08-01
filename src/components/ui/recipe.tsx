@@ -18,7 +18,7 @@ import Recipe03 from "../lib/recipe03";
 function Recipe() {
    const base = useBaseContext()
    // getting base name
-   const backgroundImage = `url(${base}images/main/recipe.png)`
+   const backgroundImage = `url(${base}images/main/recipe.webp)`
    //setting background image for first image
 
    const [email, setEmail] = useState(false)
@@ -112,7 +112,7 @@ function Recipe() {
                </h1>
                <div className="flex flex-wrap justify-between md:justify-normal gap-4 md:gap-0">
                   <div className="flex items-center gap-3 px-3 md:pr-6 py-0 md:border-r md:border-r-gray-300">
-                     <img src={`${base}images/main/user.png`} alt="user" className="w-[50px] h-[50px] rounded-full" />
+                     <img src={`${base}images/main/user.webp`} alt="user" className="w-[50px] h-[50px] rounded-full" />
                      <div className="flex flex-col">
                         <h2 className="font-[600] text-[14px]">
                            John Smith
@@ -220,7 +220,7 @@ function Recipe() {
                </h3>
                <div className="flex flex-col gap-3">
                   <div className="flex gap-2 items-center w-[100%]">
-                     <img src={`${base}images/recipe/meatballs.png`} alt="" className="w-[120px] h-[80px] rounded-2xl"/>
+                     <img src={`${base}images/recipe/meatballs.webp`} alt="" className="w-[120px] h-[80px] rounded-2xl"/>
                      <div className="flex flex-col gap-2 py-2 w-[100%]">
                         <h3 className="font-[600] text-32px  overflow-hidden text-ellipsis text-wrap w-[200px]">
                            Chicken Meatballs with Creamy Cheese
@@ -231,7 +231,7 @@ function Recipe() {
                      </div>
                   </div>
                   <div className="flex gap-2 items-center">
-                     <img src={`${base}images/recipe/pasta.png`} alt="" className="w-[120px] h-[80px] rounded-2xl"/>
+                     <img src={`${base}images/recipe/pasta.webp`} alt="" className="w-[120px] h-[80px] rounded-2xl"/>
                      <div className="flex flex-col gap-2 py-2">
                         <h3 className="font-[600] text-32px  overflow-hidden text-ellipsis text-wrap w-[200px]">
                            The Creamiest Creamy Chicken and Bacon Pasta
@@ -242,7 +242,7 @@ function Recipe() {
                      </div>
                   </div>
                   <div className="flex gap-2 items-center">
-                     <img src={`${base}images/recipe/rice.png`} alt="" className="w-[120px] h-[80px] rounded-2xl"/>
+                     <img src={`${base}images/recipe/rice.webp`} alt="" className="w-[120px] h-[80px] rounded-2xl"/>
                      <div className="flex flex-col gap-2 py-2">
                         <h3 className="font-[600] text-32px  overflow-hidden text-ellipsis text-wrap w-[200px]">
                            The Best East One Pot Chicken and Rice
@@ -252,7 +252,7 @@ function Recipe() {
                         </p>
                      </div>
                   </div>
-                  <img src={`${base}images/recipe/ads.png`} className="w-[100%] h-[300px] mt-5 md:mt-0" alt="" />
+                  <img src={`${base}images/recipe/ads.webp`} className="w-[100%] h-[300px] mt-5 md:mt-0" alt="" />
                </div>
             </div>
          </section>
@@ -265,7 +265,7 @@ function Recipe() {
          </h3>
          <div>
             <Direction_1 num={1} />
-            <img src={`${base}images/main/lady.png`} className="w-[100%] pl-9 hidden md:block rounded-lg" alt="Chef" />
+            <img src={`${base}images/main/lady.webp`} className="w-[100%] pl-9 hidden md:block rounded-lg" alt="Chef" />
             <p className="font-[400] tracking-wider text-[13px] text-justify leading-[24px] pl-9 border-b borer-b-gray-500 py-4">
                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, magni ad. Magnam, qui! Corrupti, ipsam alias aperiam, nihil, laudantium distinctio fuga dolorum culpa maiores provident cupiditate in necessitatibus consequuntur assumenda! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, excepturi repellendus vero nulla quibusdam magni eaque veniam fugiat? Odio quisquam deleniti alias modi aliquam earum dolore tempora necessitatibus corporis magni!
             </p>
@@ -299,14 +299,14 @@ function Recipe() {
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores doloremque nostrum ratione nobis earum voluptate dolor mollitia cumque corrupti? Minus cumque nam corporis repellendus maxime suscipit veritatis voluptatem voluptatum.
             </p>
             <div className="flex w-[100%] items-center justify-center md:justify-between flex-wrap md:flex-nowrap">
-               <img src={`${base}images/inbox/salad.png`} className="w-[200px] h-[200px] hidden md:block rounded-l-2xl" alt="Salad" />
+               <img src={`${base}images/inbox/salad.webp`} className="w-[200px] h-[200px] hidden md:block rounded-l-2xl" alt="Salad" />
                <form className="bg-white border w-[100%] flex justify-between md:w-fit rounded-2xl py-1 mb-6 mt-2 md:mt-0 md:mb-0 border-white px-1 mx-1" noValidate onSubmit={handleSubmit}>
                   <input type="email" name="email" onBlur={verifyEmail} id="email" placeholder="Email" className={`placeholder:text-sm placeholder:text-gray-600 px-1 md:px-4 text-black text-[16px] focus:outline-none outline-none w-[200px]`} ref={emailRef} />
                   <button type="submit" className="bg-black text-white font-[600] px-3 h-fit py-2 rounded-lg text-[13px] tracking-wide">
                      Submit
                   </button>
                </form>
-               <img src={`${base}images/inbox/photo.png`} className="w-[200px] h-[200px] hidden md:block rounded-e-2xl" alt="Meal" />
+               <img src={`${base}images/inbox/photo.webp`} className="w-[200px] h-[200px] hidden md:block rounded-e-2xl" alt="Meal" />
             </div>
          </div>
       </section>

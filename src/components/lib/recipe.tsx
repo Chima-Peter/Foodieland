@@ -15,7 +15,7 @@ const Recipe: React.FC<RecipeProps> = ({ image, text }) => {
    const [favourite, setFavourite]= useState(true)
    // state to change color when clicked
 
-   const backgroundImage = `url(${base}images/recipe/${image}.png)`
+   const backgroundImage = `url(${base}images/recipe/${image}.webp)`
    // setting background image for div
 
    const handleFavourite = () => {
