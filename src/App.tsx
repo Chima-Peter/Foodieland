@@ -5,7 +5,7 @@ import Home from "./components/ui/home"
 import Recipe from "./components/ui/recipe"
 
 type Context = '/' | '/Foodieland/'
-const BaseContext = createContext<Context>('/')
+const BaseContext = createContext<Context>('/Foodieland/')
 
 export function App() {
    const [base, setBase] = useState<Context>('/')

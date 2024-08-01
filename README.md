@@ -53,7 +53,7 @@ This is a solution to the assessment given to me by Tobams group for the Fronten
 ### Links
 
 - Solution URL: (https://github.com/Chima-Peter/Foodieland)
-- Live Site URL: (https://chima-peter.github.io/Foodieland)
+- Live Site URL: (https://chima-peter.github.io/Foodieland/)
 
 ### Built with
 
