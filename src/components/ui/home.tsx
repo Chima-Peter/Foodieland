@@ -96,6 +96,7 @@ function Home() {
    // Array of recipe data
 
    const imgArray = [1,2,3,4]
+   // Array of instagram images
 
    const backgroundImage = `url(${base}images/chef/chef.png)`
    // setting background image for div
@@ -166,7 +167,8 @@ function Home() {
       <MediaQuery maxWidth={768}>
             <MobileNav />
       </MediaQuery>
-      <section className="w-[100%] px-4 md:px-10 flex flex-col gap-20 mt-28 md:mt-24 lg:mt-6">
+
+      <section className="w-[100%] px-4 md:px-10 flex flex-col gap-20 mt-[7rem]">
 
          {/* MAIN */}
 
@@ -309,7 +311,9 @@ function Home() {
             </div>
          </div>
       </section>
+
       {/* FOODIE ISLAND */}
+
       <section className="flex flex-col gap-4 w-[100%] bg-gradient-to-b font-nav mt-6 px-4 pb-12 from-white to-[#E7F9FD] md:px-10 ">
          <div className="flex flex-col gap-2 items-center w-[100%] mb-6">
             <h3 className="font-[600] text-[28px] md:text-[36px] text-center tracking-[-4%]">

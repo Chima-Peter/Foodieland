@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa6";
 
 function DesktopNav() {
   return (
-      <nav className="flex sticky w-[100%] items-center p-4 px-4 md:px-10 justify-between border-b border-b-gray-300">
+      <nav className="flex fixed top-0 z-50 w-[100%] bg-white items-center p-4 px-4 md:px-10 justify-between border-b border-b-gray-300">
          <h1 className="font-logo text-3xl font-semibold ">
             Foodieland
          </h1>

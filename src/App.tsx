@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import ErrorPage from "./components/ui/errorpage"
 import { createContext, useContext, useEffect, useState } from "react"
 import Home from "./components/ui/home"
+import Recipe from "./components/ui/recipe"
 
 type Context = '/' | '/foodieland/'
 const BaseContext = createContext<Context>('/')
@@ -19,6 +20,7 @@ export function App() {
          <Routes>
             <Route path="*" element={<ErrorPage />} />
             <Route path="/" element={<Home />} />
+            <Route path="recipe" element={<Recipe />} />
          </Routes> 
       </BrowserRouter>
    </BaseContext.Provider>
