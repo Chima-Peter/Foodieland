@@ -291,9 +291,9 @@ function Recipe() {
       {/* INBOX SECTION */}
       <section className="w-[100%] px-4 md:px-10 mt-6 mb-20 font-nav">
          <div className="bg-[100%] bg-[#E7F9FD] w-[100%] flex flex-col gap-2 pt-8 items-center rounded-2xl text-white">
-            <h4 className="w-[300px] md:w-[500px] font-[600] text-[28px] text-center text-black md:text-[36px]">
+            <h5 className="w-[300px] md:w-[500px] font-[600] text-[28px] text-center text-black md:text-[36px]">
                Deliciousness to your inbox
-            </h4>
+            </h5>
             <p className="w-[300px] text-center text-black md:w-[600px] px-2 pt-2 font-[400] text-[14px]">
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores doloremque nostrum ratione nobis earum voluptate dolor mollitia cumque corrupti? Minus cumque nam corporis repellendus maxime suscipit veritatis voluptatem voluptatum.
             </p>
